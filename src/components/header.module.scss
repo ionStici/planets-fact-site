@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-white-20);
+}
+
+.logoLink,
+.logoLink:link,
+.logoLink:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-family: var(--antonio);
+  color: var(--color-white);
+
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -1.05px;
+}
+
+.navBtn {
+  cursor: pointer;
+  display: flex;
+  border: none;
+  background-color: transparent;
+  padding: 9px 0 9px 9px;
+
+  img {
+    pointer-events: none;
+  }
+}
+
+// // // // // // // // // // // // // // // // // // // //
+
+.nav {
+  display: none;
+}
+
+.ul {
+  display: flex;
+}
+
+.li {
+}
+
+.navLink,
+.navLink:link,
+.navLink:visited {
+  text-decoration: none;
+  color: var(--color-white);
+  opacity: 0.5;
+}
+
+// // // // // // // // // // // // // // // // // // // //

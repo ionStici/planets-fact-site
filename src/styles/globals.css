@@ -1,10 +1,46 @@
+:root {
+  --antonio: "Antonio", sans-serif;
+  --spartan: "League Spartan", sans-serif;
+
+  --color-white-20: hsla(0, 0%, 100%, 0.2);
+
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-black: hsla(240, 67%, 8%, 1);
+
+  --color-grey-dark: hsla(240, 17%, 26%, 1);
+  --color-grey-light: hsla(240, 6%, 54%, 1);
+
+  --color-blue-light: hsla(194, 48%, 49%, 1);
+  --color-yellow: hsla(33, 82%, 61%, 1);
+
+  --color-purple: hsla(263, 67%, 51%, 1);
+  --color-red-light: hsla(10, 63%, 51%, 1);
+
+  --color-red: hsla(2, 68%, 53%, 1);
+  --color-orange: hsla(17, 73%, 46%, 1);
+
+  --color-neon: hsla(169, 73%, 44%, 1);
+  --color-blue-dark: hsla(222, 87%, 56%, 1);
+}
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+  background-color: #070724;
+  background-image: url("/assets/background-stars.svg");
+}
+
+main {
 }
