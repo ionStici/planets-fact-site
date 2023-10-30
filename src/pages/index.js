@@ -1,26 +1,23 @@
-import path from "path";
-import fs from "fs/promises";
-
 import Header from "@/components/header";
+import { fetchData } from "@/lib/fetch-data";
 
 export default function Home(props) {
-    const { data } = props;
-    const planetNames = data.map((planets) => planets.name);
+  const { data } = props;
 
-    return (
-        <>
-            <Header planetNames={planetNames} />
-            <div></div>
-        </>
-    );
+  const planetNames = data.map((planet) => planet.name);
+  const planetColors = data.map((planet) => planet.planetColor);
+
+  return (
+    <>
+      <Header planetNames={planetNames} planetColors={planetColors} />
+    </>
+  );
 }
 
 export async function getStaticProps() {
-    const filePath = path.join(process.cwd(), "public/data", "data.json");
-    const jsonData = await fs.readFile(filePath);
-    const data = JSON.parse(jsonData);
+  const data = await fetchData();
 
-    return {
-        props: { data },
-    };
+  return {
+    props: { data },
+  };
 }

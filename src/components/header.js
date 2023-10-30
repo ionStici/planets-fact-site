@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import classes from "./header.module.scss";
 
-function Header({ planetNames }) {
+function Header({ planetNames, planetColors }) {
   return (
     <header className={classes.header}>
       <Link className={classes.logoLink} href="/">
@@ -15,10 +15,12 @@ function Header({ planetNames }) {
 
       <nav className={classes.nav}>
         <ul className={classes.ul}>
-          {planetNames.map((planetName) => (
+          {planetNames.map((planetName, i) => (
             <li key={planetName} className={classes.li}>
-              <Link className={classes.navLink} href={planetName.toLowerCase()}>
-                {planetName}
+              <Link href={planetName.toLowerCase()}>
+                <div style={{ backgroundColor: `${planetColors[i]}` }}></div>
+                <span>{planetName}</span>
+                <Image src="/assets/chevron.svg" alt="" width={4} height={8} />
               </Link>
             </li>
           ))}
