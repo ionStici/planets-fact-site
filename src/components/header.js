@@ -45,7 +45,12 @@ function Header({ planetNames, planetColors }) {
         <ul className={classes.ul}>
           {planetNames.map((planetName, i) => (
             <li key={planetName} className={classes.li}>
-              <Link href={planetName.toLowerCase()}>
+              <Link
+                href={planetName.toLowerCase()}
+                onClick={() => {
+                  navState ? toggleNav() : "";
+                }}
+              >
                 <div style={{ backgroundColor: `${planetColors[i]}` }} />
                 <span>{planetName}</span>
                 <Image src="/assets/chevron.svg" alt="" width={6} height={8} />

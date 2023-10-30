@@ -1,6 +1,11 @@
+import Header from "@/components/header";
+
 import { fetchData } from "@/lib/fetch-data";
 
-function PlanetPage({ planet }) {
+function PlanetPage({ data, planet }) {
+  const planetNames = data.map((planet) => planet.name);
+  const planetColors = data.map((planet) => planet.planetColor);
+
   const { name, rotation, revolution, radius, temperature } = planet;
 
   const overviewContent = planet.overview.content;
@@ -18,6 +23,7 @@ function PlanetPage({ planet }) {
 
   return (
     <>
+      <Header planetNames={planetNames} planetColors={planetColors} />
       <p>{name}</p>
       <p>{overviewContent}</p>
     </>
@@ -37,7 +43,7 @@ export async function getStaticProps(context) {
   });
 
   return {
-    props: { planet },
+    props: { data, planet },
   };
 }
 
