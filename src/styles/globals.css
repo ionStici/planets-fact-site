@@ -34,13 +34,11 @@
   box-sizing: border-box;
 }
 
-html {
-}
+/* html {} */
 
 body {
   background-color: #070724;
   background-image: url("/assets/background-stars.svg");
 }
 
-main {
-}
+/* main {} */
