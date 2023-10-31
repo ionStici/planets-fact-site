@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import Head from "next/head";
 
 import { fetchData } from "@/lib/fetch-data";
 
@@ -23,6 +24,9 @@ function PlanetPage({ data, planet }) {
 
   return (
     <>
+      <Head>
+        <title>{name} | Planet Facts</title>
+      </Head>
       <Header planetNames={planetNames} planetColors={planetColors} />
       <p>{name}</p>
       <p>{overviewContent}</p>
