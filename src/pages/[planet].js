@@ -6,7 +6,7 @@ import Header from "@/components/header";
 import Head from "next/head";
 import Image from "next/image";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import classes from "./../styles/planet.module.scss";
 
@@ -34,6 +34,22 @@ function PlanetPage({ data, planet }) {
   const idx = planetNames.findIndex((planetName) => planetName === name);
   const currentColor = planetColors[idx];
 
+  const [aboutPlanet, setAboutPlanet] = useState([
+    name,
+    overviewContent,
+    overciewSource,
+  ]);
+
+  let currentPlanetClass;
+  if (name === "Mercury") currentPlanetClass = classes.mercury;
+  if (name === "Venus") currentPlanetClass = classes.venus;
+  if (name === "Earth") currentPlanetClass = classes.earth;
+  if (name === "Mars") currentPlanetClass = classes.mars;
+  if (name === "Jupiter") currentPlanetClass = classes.jupiter;
+  if (name === "Saturn") currentPlanetClass = classes.saturn;
+  if (name === "Uranus") currentPlanetClass = classes.uranus;
+  if (name === "Neptune") currentPlanetClass = classes.neptune;
+
   return (
     <>
       <Head>
@@ -42,12 +58,20 @@ function PlanetPage({ data, planet }) {
       <Header planetNames={planetNames} planetColors={planetColors} />
 
       <section className={classes.layout}>
-        <Image src={imagePlanet} alt={name} width={111} height={111} />
+        <div className={classes.imgWrapper}>
+          <Image
+            src={imagePlanet}
+            alt={name}
+            width={111}
+            height={111}
+            priority
+            className={currentPlanetClass}
+          />
+        </div>
 
         <SubMenu currentColor={currentColor} />
-        <AboutPlanet />
 
-        <h1>{name}</h1>
+        <AboutPlanet aboutPlanet={aboutPlanet} />
 
         <StatsBoxes
           rotation={rotation}

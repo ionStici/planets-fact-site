@@ -1,4 +1,50 @@
 .layout {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 51px 304px 1fr 1fr;
+}
+
+.imgWrapper {
+  justify-self: center;
+  align-self: center;
+}
+
+.mercury {
+  width: 111px;
+  width: 111px;
+}
+
+.venus {
+  width: 154px;
+  height: 154px;
+}
+
+.earth {
+  width: 173px;
+  height: 173px;
+}
+
+.mars {
+  width: 129px;
+  height: 129px;
+}
+
+.jupiter {
+  width: 224px;
+  height: 224px;
+}
+
+.saturn {
+  width: 256px;
+  height: 256px;
+}
+
+.uranus {
+  width: 176px;
+  height: 176px;
+}
+
+.neptune {
+  width: 173px;
+  height: 173px;
 }

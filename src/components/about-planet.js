@@ -1,12 +1,14 @@
+import classes from "./about-planet.module.scss";
 import Image from "next/image";
 
-function AboutPlanet() {
+function AboutPlanet({ aboutPlanet }) {
   return (
-    <div>
-      <p></p>
+    <div className={classes.wrapper}>
+      <h1>{aboutPlanet[0]}</h1>
+      <p>{aboutPlanet[1]}</p>
       <p>
         <span>Source:</span>
-        <a href="https://www.wikipedia.org/">
+        <a href={aboutPlanet[2]}>
           <span>Wikipedia</span>
           <Image src="assets/icon-source.svg" alt="" width={12} height={12} />
         </a>
