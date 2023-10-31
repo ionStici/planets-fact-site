@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 
 import { fetchData } from "@/lib/fetch-data";
 
@@ -8,6 +9,9 @@ import classes from "./../styles/index.module.scss";
 export default function Home({ data }) {
   return (
     <>
+      <Head>
+        <title>Planets Fact | Frontend Mentor Challenge</title>
+      </Head>
       <section className={classes.section}>
         {data.map((planet, i) => {
           return (
