@@ -18,14 +18,9 @@ function PlanetPage({ data, planet }) {
 
   const { name, rotation, revolution, radius, temperature } = planet;
 
-  const overviewContent = planet.overview.content;
-  const overviewSource = planet.overview.source;
-
-  const structureContent = planet.structure.content;
-  const structureSource = planet.structure.source;
-
-  const geologyContent = planet.geology.content;
-  const geologySource = planet.geology.source;
+  const { content: overviewContent, source: overviewSource } = planet.overview;
+  const { content: structContent, source: structSource } = planet.structure;
+  const { content: geologyContent, source: geologySource } = planet.geology;
 
   const imagePlanet = planet.images.planet;
   const imageInternal = planet.images.internal;
@@ -44,16 +39,28 @@ function PlanetPage({ data, planet }) {
   if (name === "Uranus") currentPlanetClass = classes.uranus;
   if (name === "Neptune") currentPlanetClass = classes.neptune;
 
-  const handleClick = function (type) {
-    console.log(type);
+  const [planetImage, setPlanetImage] = useState(imagePlanet);
+  const [aboutPlanet, setAboutPlanet] = useState([]);
 
+  useEffect(() => {
+    setAboutPlanet([name, overviewContent, overviewSource]);
+    setPlanetImage(imagePlanet);
+  }, [name]);
+
+  const handleClick = function (type) {
     if (type === "overview") {
+      setAboutPlanet([name, overviewContent, overviewSource]);
+      setPlanetImage(imagePlanet);
     }
 
     if (type === "structure") {
+      setAboutPlanet([name, structContent, structSource]);
+      setPlanetImage(imageInternal);
     }
 
     if (type === "surface") {
+      setAboutPlanet([name, geologyContent, geologySource]);
+      setPlanetImage(imageGeology);
     }
   };
 
@@ -67,7 +74,7 @@ function PlanetPage({ data, planet }) {
       <section className={classes.layout}>
         <div className={classes.imgWrapper}>
           <Image
-            src={imagePlanet}
+            src={planetImage}
             alt={name}
             width={111}
             height={111}
@@ -78,7 +85,7 @@ function PlanetPage({ data, planet }) {
 
         <SubMenu currentColor={currentColor} onClick={handleClick} />
 
-        <AboutPlanet aboutPlanet={[name, overviewContent, overviewSource]} />
+        <AboutPlanet aboutPlanet={aboutPlanet} />
 
         <StatsBoxes
           rotation={rotation}
