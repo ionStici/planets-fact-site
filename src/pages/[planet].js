@@ -19,7 +19,7 @@ function PlanetPage({ data, planet }) {
   const { name, rotation, revolution, radius, temperature } = planet;
 
   const overviewContent = planet.overview.content;
-  const overciewSource = planet.overview.source;
+  const overviewSource = planet.overview.source;
 
   const structureContent = planet.structure.content;
   const structureSource = planet.structure.source;
@@ -34,12 +34,6 @@ function PlanetPage({ data, planet }) {
   const idx = planetNames.findIndex((planetName) => planetName === name);
   const currentColor = planetColors[idx];
 
-  const [aboutPlanet, setAboutPlanet] = useState([
-    name,
-    overviewContent,
-    overciewSource,
-  ]);
-
   let currentPlanetClass;
   if (name === "Mercury") currentPlanetClass = classes.mercury;
   if (name === "Venus") currentPlanetClass = classes.venus;
@@ -49,6 +43,19 @@ function PlanetPage({ data, planet }) {
   if (name === "Saturn") currentPlanetClass = classes.saturn;
   if (name === "Uranus") currentPlanetClass = classes.uranus;
   if (name === "Neptune") currentPlanetClass = classes.neptune;
+
+  const handleClick = function (type) {
+    console.log(type);
+
+    if (type === "overview") {
+    }
+
+    if (type === "structure") {
+    }
+
+    if (type === "surface") {
+    }
+  };
 
   return (
     <>
@@ -69,9 +76,9 @@ function PlanetPage({ data, planet }) {
           />
         </div>
 
-        <SubMenu currentColor={currentColor} />
+        <SubMenu currentColor={currentColor} onClick={handleClick} />
 
-        <AboutPlanet aboutPlanet={aboutPlanet} />
+        <AboutPlanet aboutPlanet={[name, overviewContent, overviewSource]} />
 
         <StatsBoxes
           rotation={rotation}
