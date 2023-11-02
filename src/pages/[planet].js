@@ -17,14 +17,10 @@ function PlanetPage({ data, planet }) {
   const planetColors = data.map((planet) => planet.planetColor);
 
   const { name, rotation, revolution, radius, temperature } = planet;
-
   const { content: overviewContent, source: overviewSource } = planet.overview;
   const { content: structContent, source: structSource } = planet.structure;
   const { content: geologyContent, source: geologySource } = planet.geology;
-
-  const imagePlanet = planet.images.planet;
-  const imageInternal = planet.images.internal;
-  const imageGeology = planet.images.geology;
+  const { planet: planetImg, internalImg, geologyImg } = planet.images;
 
   const idx = planetNames.findIndex((planetName) => planetName === name);
   const currentColor = planetColors[idx];
@@ -39,28 +35,28 @@ function PlanetPage({ data, planet }) {
   if (name === "Uranus") currentPlanetClass = classes.uranus;
   if (name === "Neptune") currentPlanetClass = classes.neptune;
 
-  const [planetImage, setPlanetImage] = useState(imagePlanet);
+  const [planetImage, setPlanetImage] = useState(planetImg);
   const [aboutPlanet, setAboutPlanet] = useState([]);
 
   useEffect(() => {
     setAboutPlanet([name, overviewContent, overviewSource]);
-    setPlanetImage(imagePlanet);
+    setPlanetImage(planetImg);
   }, [name]);
 
   const handleClick = function (type) {
     if (type === "overview") {
       setAboutPlanet([name, overviewContent, overviewSource]);
-      setPlanetImage(imagePlanet);
+      setPlanetImage(planetImg);
     }
 
     if (type === "structure") {
       setAboutPlanet([name, structContent, structSource]);
-      setPlanetImage(imageInternal);
+      setPlanetImage(internalImg);
     }
 
     if (type === "surface") {
       setAboutPlanet([name, geologyContent, geologySource]);
-      setPlanetImage(imageGeology);
+      setPlanetImage(geologyImg);
     }
   };
 

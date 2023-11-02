@@ -6,6 +6,16 @@
   max-width: 450px;
   margin: 0 auto;
 
+  @media only screen and (min-width: 768px) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    text-align: revert;
+    max-width: revert;
+    padding: 0;
+    margin: 0;
+  }
+
   h1 {
     font-family: var(--antonio);
     color: var(--color-white);
