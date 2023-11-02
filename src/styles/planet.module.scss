@@ -1,7 +1,15 @@
 .layout {
   display: grid;
+
   grid-template-columns: 1fr;
-  grid-template-rows: 51px 304px 1fr 1fr;
+  grid-template-rows: 51px 304px 263px 1fr;
+
+  @media only screen and (max-width: 325px) {
+    grid-template-rows: 51px 304px 300px 1fr;
+  }
+
+  max-width: 548px;
+  margin: 0 auto;
 }
 
 .imgWrapper {

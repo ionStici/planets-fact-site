@@ -1,6 +1,5 @@
 import classes from "./about-planet.module.scss";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 function AboutPlanet({ aboutPlanet }) {
   return (
