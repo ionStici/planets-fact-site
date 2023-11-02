@@ -20,6 +20,7 @@
 }
 
 .imgWrapper {
+  position: relative;
   justify-self: center;
   align-self: center;
   display: flex;
@@ -29,13 +30,46 @@
   }
 }
 
+.planet {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.geology {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 62px;
+  height: 75px;
+
+  @media only screen and (min-width: 768px) {
+    width: 102px;
+    height: 125px;
+  }
+
+  //   @media only screen and (min-width: desktop) {
+  //     width: 163px;
+  //     height: 199px;
+  //   }
+}
+
 .mercury {
   width: 111px;
   width: 111px;
 
+  .geology {
+    top: 87.5px;
+  }
+
   @media only screen and (min-width: 768px) {
     width: 184px;
     height: 184px;
+
+    .geology {
+      top: 145px;
+    }
   }
 }
 
@@ -43,9 +77,17 @@
   width: 154px;
   height: 154px;
 
+  .geology {
+    top: 108px;
+  }
+
   @media only screen and (min-width: 768px) {
     width: 253px;
     height: 253px;
+
+    .geology {
+      top: 177px;
+    }
   }
 }
 
@@ -53,9 +95,17 @@
   width: 173px;
   height: 173px;
 
+  .geology {
+    top: 119px;
+  }
+
   @media only screen and (min-width: 768px) {
     width: 285px;
     height: 285px;
+
+    .geology {
+      top: 196px;
+    }
   }
 }
 
@@ -63,9 +113,17 @@
   width: 129px;
   height: 129px;
 
+  .geology {
+    top: 95px;
+  }
+
   @media only screen and (min-width: 768px) {
     width: 213px;
     height: 213px;
+
+    .geology {
+      top: 157px;
+    }
   }
 }
 
@@ -73,9 +131,17 @@
   width: 224px;
   height: 224px;
 
+  .geology {
+    top: 144px;
+  }
+
   @media only screen and (min-width: 768px) {
     width: 369px;
     height: 369px;
+
+    .geology {
+      top: 236px;
+    }
   }
 }
 
@@ -83,9 +149,17 @@
   width: 256px;
   height: 256px;
 
+  .geology {
+    top: 152px;
+  }
+
   @media only screen and (min-width: 768px) {
     width: 422px;
     height: 422px;
+
+    .geology {
+      top: 250px;
+    }
   }
 }
 
@@ -93,9 +167,17 @@
   width: 176px;
   height: 176px;
 
+  .geology {
+    top: 125px;
+  }
+
   @media only screen and (min-width: 768px) {
     width: 290px;
     height: 290px;
+
+    .geology {
+      top: 200px;
+    }
   }
 }
 
@@ -103,8 +185,16 @@
   width: 173px;
   height: 173px;
 
+  .geology {
+    top: 118px;
+  }
+
   @media only screen and (min-width: 768px) {
     width: 285px;
     height: 285px;
+
+    .geology {
+      top: 195px;
+    }
   }
 }

@@ -20,7 +20,11 @@ function PlanetPage({ data, planet }) {
   const { content: overviewContent, source: overviewSource } = planet.overview;
   const { content: structContent, source: structSource } = planet.structure;
   const { content: geologyContent, source: geologySource } = planet.geology;
-  const { planet: planetImg, internalImg, geologyImg } = planet.images;
+  const {
+    planet: planetImg,
+    internal: internalImg,
+    geology: geologyImg,
+  } = planet.images;
 
   const idx = planetNames.findIndex((planetName) => planetName === name);
   const currentColor = planetColors[idx];
@@ -37,26 +41,31 @@ function PlanetPage({ data, planet }) {
 
   const [planetImage, setPlanetImage] = useState(planetImg);
   const [aboutPlanet, setAboutPlanet] = useState([]);
+  const [surfaceImg, setSurfaceImg] = useState(false);
 
   useEffect(() => {
     setAboutPlanet([name, overviewContent, overviewSource]);
     setPlanetImage(planetImg);
+    setSurfaceImg(false);
   }, [name]);
 
   const handleClick = function (type) {
     if (type === "overview") {
       setAboutPlanet([name, overviewContent, overviewSource]);
       setPlanetImage(planetImg);
+      setSurfaceImg(false);
     }
 
     if (type === "structure") {
       setAboutPlanet([name, structContent, structSource]);
       setPlanetImage(internalImg);
+      setSurfaceImg(false);
     }
 
     if (type === "surface") {
       setAboutPlanet([name, geologyContent, geologySource]);
-      setPlanetImage(geologyImg);
+      setPlanetImage(planetImg);
+      setSurfaceImg(geologyImg);
     }
   };
 
@@ -69,14 +78,25 @@ function PlanetPage({ data, planet }) {
 
       <section className={classes.layout}>
         <div className={classes.imgWrapper}>
-          <Image
-            src={planetImage}
-            alt={name}
-            width={111}
-            height={111}
-            priority
-            className={currentPlanetClass}
-          />
+          <div className={currentPlanetClass}>
+            <Image
+              src={planetImage}
+              alt={name}
+              width={250}
+              height={250}
+              priority
+              className={classes.planet}
+            />
+            {surfaceImg && (
+              <Image
+                src={surfaceImg}
+                alt={name}
+                width={163}
+                height={199}
+                className={classes.geology}
+              />
+            )}
+          </div>
         </div>
 
         <SubMenu currentColor={currentColor} onClick={handleClick} />
