@@ -15,6 +15,7 @@ import { fetchData } from "@/lib/fetch-data";
 function PlanetPage({ data, planet }) {
   const planetNames = data.map((planet) => planet.name);
   const planetColors = data.map((planet) => planet.planetColor);
+  const navColors = data.map((planet) => planet.navColor);
 
   const { name, rotation, revolution, radius, temperature } = planet;
   const { content: overviewContent, source: overviewSource } = planet.overview;
@@ -27,7 +28,7 @@ function PlanetPage({ data, planet }) {
   } = planet.images;
 
   const idx = planetNames.findIndex((planetName) => planetName === name);
-  const currentColor = planetColors[idx];
+  const currentColor = navColors[idx];
 
   let currentPlanetClass;
   if (name === "Mercury") currentPlanetClass = classes.mercury;
