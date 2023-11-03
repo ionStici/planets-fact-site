@@ -27,38 +27,50 @@ function Header({ planetNames, planetColors }) {
 
   return (
     <header className={classes.header}>
-      <Link
-        className={classes.logoLink}
-        href="/"
-        onClick={() => {
-          navState ? toggleNav() : "";
-        }}
-      >
-        The Planets
-      </Link>
+      <div className={classes.wrapper}>
+        <Link
+          className={classes.logoLink}
+          href="/"
+          onClick={() => {
+            navState ? toggleNav() : "";
+          }}
+        >
+          The Planets
+        </Link>
 
-      <button className={classes.navBtn} onClick={toggleNav}>
-        <Image src="/assets/icon-hamburger.svg" alt="" width={24} height={17} />
-      </button>
+        <button className={classes.navBtn} onClick={toggleNav}>
+          <Image
+            src="/assets/icon-hamburger.svg"
+            alt=""
+            width={24}
+            height={17}
+          />
+        </button>
 
-      <nav className={`${classes.nav} ${classes.hideNav}`} ref={navEl}>
-        <ul className={classes.ul}>
-          {planetNames.map((planetName, i) => (
-            <li key={planetName} className={classes.li}>
-              <Link
-                href={planetName.toLowerCase()}
-                onClick={() => {
-                  navState ? toggleNav() : "";
-                }}
-              >
-                <div style={{ backgroundColor: `${planetColors[i]}` }} />
-                <span>{planetName}</span>
-                <Image src="/assets/chevron.svg" alt="" width={6} height={8} />
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+        <nav className={`${classes.nav} ${classes.hideNav}`} ref={navEl}>
+          <ul className={classes.ul}>
+            {planetNames.map((planetName, i) => (
+              <li key={planetName} className={classes.li}>
+                <Link
+                  href={planetName.toLowerCase()}
+                  onClick={() => {
+                    navState ? toggleNav() : "";
+                  }}
+                >
+                  <div style={{ backgroundColor: `${planetColors[i]}` }} />
+                  <span>{planetName}</span>
+                  <Image
+                    src="/assets/chevron.svg"
+                    alt=""
+                    width={6}
+                    height={8}
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
