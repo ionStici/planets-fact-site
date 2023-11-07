@@ -8,6 +8,11 @@
     border-bottom: none;
   }
 
+  @media only screen and (min-width: 1200px) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
   ul {
     list-style: none;
     padding: 0 24px;

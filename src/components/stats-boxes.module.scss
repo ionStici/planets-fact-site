@@ -11,6 +11,13 @@
     column-gap: 11px;
   }
 
+  @media only screen and (min-width: 1200px) {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+
+    column-gap: 30px;
+  }
+
   div {
     height: 48px;
     padding: 0 24px;
@@ -25,7 +32,7 @@
     }
 
     @media only screen and (min-width: 768px) {
-      height: 88px;
+      height: 100%;
       padding: 0 0 0 15px;
       flex-grow: 1;
 
@@ -36,6 +43,10 @@
       &:not(:last-child) {
         margin-bottom: 0;
       }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      width: 255px;
     }
   }
 
@@ -58,6 +69,14 @@
     @media only screen and (min-width: 768px) {
       margin-bottom: 6px;
     }
+
+    @media only screen and (min-width: 1200px) {
+      // font-size: 11px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 25px;
+      letter-spacing: 1px;
+    }
   }
 
   p:last-child {
@@ -71,6 +90,11 @@
     @media only screen and (min-width: 768px) {
       font-size: 24px;
       letter-spacing: -0.9px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      font-size: 40px;
+      letter-spacing: -1.5px;
     }
   }
 }
