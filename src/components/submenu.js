@@ -82,6 +82,11 @@ function SubMenu({ currentColor, onClick }) {
             background-color: ${currentColor};
             border-color: ${currentColor};
           }
+
+          .active:hover {
+            background-color: ${currentColor};
+            border-color: ${currentColor};
+          }
         }
       `}</style>
     </nav>
