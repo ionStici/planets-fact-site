@@ -7,7 +7,7 @@ function AboutPlanet({ aboutPlanet }) {
       <h1>{aboutPlanet[0]}</h1>
       <p>{aboutPlanet[1]}</p>
       <div>
-        <span>Source:</span>
+        <span>Source :</span>
         <a href={aboutPlanet[2]}>
           <span>Wikipedia</span>
           <Image src="assets/icon-source.svg" alt="" width={12} height={12} />

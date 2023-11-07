@@ -30,6 +30,11 @@
       width: 280px;
       margin-left: auto;
     }
+
+    @media only screen and (min-width: 1200px) {
+      width: 100%;
+      height: revert;
+    }
   }
 
   li:not(:last-child) {
@@ -70,7 +75,21 @@
       span {
         opacity: 0.5;
         margin-right: 15px;
+
+        @media only screen and (min-width: 1200px) {
+          margin-right: 28px;
+        }
       }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      height: 48px;
+      padding-left: 28px;
+
+      //   font-size: 12px;
+      font-size: 15px;
+      line-height: 25px;
+      letter-spacing: 2.571px;
     }
   }
 

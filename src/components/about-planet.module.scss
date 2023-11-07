@@ -36,6 +36,11 @@
       font-size: 48px;
       margin-bottom: 24px;
     }
+
+    @media only screen and (min-width: 1200px) {
+      font-size: 80px;
+      margin-bottom: 23px;
+    }
   }
 
   p {
@@ -49,6 +54,14 @@
     opacity: 0.75;
 
     margin-bottom: 32px;
+
+    @media only screen and (min-width: 1200px) {
+      // font-size: 14px;
+      font-size: 17px;
+      line-height: 25px;
+
+      margin-bottom: 24px;
+    }
   }
 
   div {
@@ -61,6 +74,15 @@
 
     font-size: 15px;
     line-height: 25px;
+
+    @media only screen and (min-width: 768px) {
+      justify-content: revert;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      // font-size: 14px;
+      font-size: 17px;
+    }
 
     span {
       font-weight: 400;
