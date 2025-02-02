@@ -1,8 +1,10 @@
+import { Planet } from "@/types/planet";
 import Stat from "./stat";
+import classes from "@/styles/stats-boxes.module.scss";
 
-import classes from "./stats-boxes.module.scss";
+function StatsBoxes({ planetData }: { planetData: Planet }) {
+  const { rotation, revolution, radius, temperature } = planetData;
 
-function StatsBoxes({ rotation, revolution, radius, temperature }) {
   return (
     <section className={classes.wrapper}>
       <Stat title="Rotation Time" data={rotation} />

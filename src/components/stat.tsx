@@ -1,4 +1,6 @@
-function Stat({ title, data }) {
+type StatProps = { title: string; data: string };
+
+function Stat({ title, data }: StatProps) {
   return (
     <div>
       <p>{title}</p>

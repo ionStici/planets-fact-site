@@ -72,7 +72,7 @@
     height: 100vh;
     background-color: var(--color-black);
     position: absolute;
-    z-index: 5;
+    z-index: 15;
     top: 69px;
     left: 0;
     transition: opacity 0.35s;
@@ -101,39 +101,37 @@
     padding: 4px 0;
   }
 
-  div {
-    display: none;
-
+  .bar {
     @media only screen and (max-width: 767px) {
-      display: block;
       width: 20px;
       height: 20px;
       border-radius: 50%;
       margin-right: 24px;
     }
 
-    @media only screen and (min-width: 1000px) {
-      display: block;
-
-      width: 100%;
-      height: 4px;
-
+    @media only screen and (min-width: 768px) {
       position: absolute;
       left: 0;
-      top: 0;
-
+      bottom: 0;
+      width: 100%;
+      height: 4px;
       transition: opacity 0.33;
       opacity: 0;
     }
+
+    @media only screen and (min-width: 1000px) {
+      top: 0;
+    }
   }
 
-  a:hover div {
+  a:hover .bar {
     opacity: 1;
   }
 
   a,
   a:link,
   a:visited {
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -150,22 +148,21 @@
 
       font-size: 15px;
       letter-spacing: 1.364px;
+      transition: font-size 0.3s;
 
       &:not(:last-child) {
         border-bottom: 1px solid var(--color-white-20);
       }
 
-      transition: font-size 0.3s;
       &:hover {
         font-size: 18px;
       }
     }
 
     @media only screen and (min-width: 768px) {
-      //   font-size: 11px;
+      padding: 0 0 33px 0;
       font-size: 14px;
       letter-spacing: 1px;
-
       opacity: 0.5;
       transition: opacity 0.2s;
 
@@ -177,7 +174,6 @@
     @media only screen and (min-width: 1000px) {
       opacity: 0.75;
       padding: 38px 0;
-      position: relative;
     }
   }
 
