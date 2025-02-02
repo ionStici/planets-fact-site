@@ -1,0 +1,17 @@
+1:"$Sreact.fragment"
+4:I[6213,[],"OutletBoundary"]
+6:I[6213,[],"MetadataBoundary"]
+8:I[6213,[],"ViewportBoundary"]
+a:I[4835,[],""]
+:HL["/planets-fact-site/_next/static/media/21c9b7f6563401f3-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/planets-fact-site/_next/static/media/ae0a0c671023eecc-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/planets-fact-site/_next/static/css/31d7b3699f0a89a7.css","style"]
+0:{"P":null,"b":"80s7al_Y5lDZbdl4KRkY2","p":"/planets-fact-site","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/planets-fact-site/_next/static/css/31d7b3699f0a89a7.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L2"]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L3",null,["$","$L4",null,{"children":"$L5"}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","z0zWid5jj6SmpLEqcAhzV",{"children":[["$","$L6",null,{"children":"$L7"}],["$","$L8",null,{"children":"$L9"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$a","$undefined"],"s":false,"S":true}
+b:I[5244,[],""]
+c:I[3866,[],""]
+d:I[8173,["173","static/chunks/173-c72f956e0e7ca46c.js","345","static/chunks/app/not-found-c0faa61fc1c7a657.js"],""]
+2:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_4d6a73 __className_fc1e64","children":["$","main",null,{"children":["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],["$","div",null,{"style":{"height":"100dvh","display":"flex","justifyContent":"center","alignItems":"center"},"children":["$","div",null,{"children":[["$","h1",null,{"style":{"fontSize":"45px","marginBottom":"24px"},"children":"404 not found"}],["$","p",null,{"style":{"fontFamily":"League Spartan","textAlign":"center","fontSize":"30px","paddingBottom":"40px","marginBottom":"50px","color":"#bbb","border":0,"borderBottomWidth":"1px","borderColor":"#777","borderStyle":"solid"},"children":"Page does not exist"}],["$","$Ld",null,{"href":"/","style":{"fontFamily":"League Spartan","fontSize":"40px","textAlign":"center","color":"white","textDecoration":"none"},"children":"Go Home"}]]}]}]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]
+3:E{"digest":"NEXT_REDIRECT;replace;/earth/overview;307;"}
+9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Planets Fact | Frontend Mentor Coding Challenge"}],["$","meta","2",{"name":"description","content":"Discover fascinating facts about our solar system and beyond. Explore detailed planet guides, astronomical phenomena, and the latest space discoveries at Planets Fact."}],["$","link","3",{"rel":"icon","href":"/planets-fact-site/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+5:null
