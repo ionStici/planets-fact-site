@@ -16,7 +16,7 @@ function Header({ data, planetParam }: HeaderProps) {
   return (
     <header className={classes.header}>
       <div className={classes.wrapper}>
-        <Link className={classes.logoLink} href="/">
+        <Link className={classes.logoLink} href="/planets">
           The Planets
         </Link>
         <button className={classes.navBtn} onClick={() => setIsOpen((p) => !p)}>
